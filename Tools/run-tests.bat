@@ -5,7 +5,8 @@ rem
 rem  Uso:   Tools\run-tests.bat
 rem  Antes: CIERRA Unity (no se puede abrir el mismo proyecto dos veces).
 rem
-rem  Busca Unity 6000.6.5f1 en la ruta por defecto de Unity Hub. Si lo tienes en
+rem  Busca Unity 6000.6.5f1 en D:\Archivos de programa\Unity\Hub y en la ruta por
+rem  defecto de Unity Hub (C:\Program Files). Si lo tienes en
 rem  otra carpeta, define antes la variable UNITY_PATH, por ejemplo:
 rem     set UNITY_PATH=D:\Unity\6000.6.5f1\Editor\Unity.exe
 rem
@@ -18,6 +19,9 @@ setlocal
 set "PROJECT=%~dp0.."
 for %%I in ("%PROJECT%") do set "PROJECT=%%~fI"
 
+rem Rutas conocidas (la primera que exista). UNITY_PATH, si esta definida, manda.
+if "%UNITY_PATH%"=="" if exist "D:\Archivos de programa\Unity\Hub\Editor\6000.6.5f1\Editor\Unity.exe" set "UNITY_PATH=D:\Archivos de programa\Unity\Hub\Editor\6000.6.5f1\Editor\Unity.exe"
+if "%UNITY_PATH%"=="" if exist "C:\Program Files\Unity\Hub\Editor\6000.6.5f1\Editor\Unity.exe" set "UNITY_PATH=C:\Program Files\Unity\Hub\Editor\6000.6.5f1\Editor\Unity.exe"
 if "%UNITY_PATH%"=="" set "UNITY_PATH=C:\Program Files\Unity\Hub\Editor\6000.6.5f1\Editor\Unity.exe"
 if not exist "%UNITY_PATH%" (
     echo [ERROR] No encuentro Unity en "%UNITY_PATH%".
@@ -39,7 +43,7 @@ set "CODE=%ERRORLEVEL%"
 if exist "%RESULTS%" (
     powershell -NoProfile -Command "$r = [xml](Get-Content -LiteralPath '%RESULTS%'); $t = $r.'test-run'; Write-Host ''; Write-Host ('Total: {0}   Correctas: {1}   Fallidas: {2}   Omitidas: {3}   Duracion: {4:N1} s' -f $t.total, $t.passed, $t.failed, $t.skipped, [double]$t.duration); if ([int]$t.failed -gt 0) { Write-Host ''; Write-Host 'Pruebas fallidas:'; $r.SelectNodes('//test-case[@result=''Failed'']') | ForEach-Object { Write-Host (' - ' + $_.fullname) } }"
 ) else (
-    echo [ERROR] Unity no generó resultados. Revisa %LOG%
+    echo [ERROR] Unity no genero resultados. Revisa %LOG%
 )
 
 echo.
