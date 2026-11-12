@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 124e789576b670a469065e52e49291fc, type: 3}
+  m_Name: SO_Character_Footballer
+  m_EditorClassIdentifier: NovaStriker.Gameplay::NovaStriker.Gameplay.Characters.CharacterDefinition
+  _displayName: Futbolista
+  _isTarget: 1
+  _prefab: {fileID: 2072816662937063330, guid: 9fccb8fb54a240749b84166fa0070336, type: 3}
+  _knockdown:
+    ArmingDelay: 0.5
+    UngroundedGrace: 0.2
+    FallSpeed: 2.5
+    MaxSupportTiltDegrees: 25
+    TiltGrace: 0.08
+    PushedSpeed: 1.5
+    BallHitMinSpeed: 2
+    ImpactMinSpeed: 2.5
+  _hitImpulseMultiplier: 6
+  _maxHitImpulse: 40

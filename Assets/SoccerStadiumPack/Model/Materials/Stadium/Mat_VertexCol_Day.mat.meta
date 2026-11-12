@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 5e1b9e0a74825154ab4f8a4fc88a8262
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 238584
+  packageName: Low Poly Soccer Stadium And Balls
+  packageVersion: 1.0
+  assetPath: Assets/SoccerStadiumPack/Model/Materials/Stadium/Mat_VertexCol_Day.mat
+  uploadId: 548185

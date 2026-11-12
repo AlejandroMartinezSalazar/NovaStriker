@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48a8b12a98d86884d8f7afd1e0221a73, type: 3}
+  m_Name: SO_Level_11
+  m_EditorClassIdentifier: NovaStriker.Gameplay::NovaStriker.Gameplay.Level.LevelDefinition
+  _displayName: Relevo
+  _ballCount: 7
+  _throwStrategy: {fileID: 11400000, guid: a385048e49bb7e64a8c46d26e76c9ee2, type: 2}
+  _layout: {fileID: 7499615907744515919, guid: 0985c34be355c0f449141a72f49a29af, type: 3}

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: fc13bdb485c669c4cbe70e15565c58e5
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 238584
+  packageName: Low Poly Soccer Stadium And Balls
+  packageVersion: 1.0
+  assetPath: Assets/SoccerStadiumPack/Model/Materials/Ball/Mat_OtherBall_Basket_C.mat
+  uploadId: 548185

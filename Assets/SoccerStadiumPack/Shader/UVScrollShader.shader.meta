@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 8179a9ffb1107e542a6e35d72ff8cc55
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures: []
+  nonModifiableTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 238584
+  packageName: Low Poly Soccer Stadium And Balls
+  packageVersion: 1.0
+  assetPath: Assets/SoccerStadiumPack/Shader/UVScrollShader.shader
+  uploadId: 548185

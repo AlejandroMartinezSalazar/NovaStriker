@@ -1,0 +1,47 @@
+# ---------- Unity: carpetas que Unity regenera ----------
+/[Ll]ibrary/
+/[Tt]emp/
+/[Oo]bj/
+/[Bb]uild/
+/[Bb]uilds/
+/[Ll]ogs/
+/[Uu]ser[Ss]ettings/
+/[Mm]emoryCaptures/
+/[Rr]ecordings/
+/.utmp/
+
+# ---------- IDE (Visual Studio / Rider / VS Code); Unity regenera .csproj y .sln ----------
+.vs/
+.vscode/
+.idea/
+*.csproj
+*.sln
+*.suo
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+*.opendb
+*.VC.db
+
+# ---------- Compilaciones y firma ----------
+*.apk
+*.aab
+*.symbols.zip
+*.keystore
+*.jks
+
+# ---------- Paquetes ya importados (el contenido está en Assets/) ----------
+*.unitypackage
+
+# ---------- Informes de fallos y temporales ----------
+sysinfo.txt
+crashlytics-buildid.txt
+*.tmp
+.DS_Store
+Thumbs.db
+
+# ---------- Propios del proyecto ----------
+/gradle_info*.txt
+/TestResults/

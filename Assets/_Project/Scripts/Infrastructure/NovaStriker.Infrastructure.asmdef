@@ -1,0 +1,14 @@
+{
+    "name": "NovaStriker.Infrastructure",
+    "rootNamespace": "NovaStriker.Infrastructure",
+    "references": ["NovaStriker.Core", "NovaStriker.Contracts"],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": false,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

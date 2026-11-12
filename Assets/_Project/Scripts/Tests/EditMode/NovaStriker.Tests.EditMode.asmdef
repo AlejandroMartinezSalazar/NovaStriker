@@ -1,0 +1,31 @@
+{
+    "name": "NovaStriker.Tests.EditMode",
+    "rootNamespace": "NovaStriker.Tests.EditMode",
+    "references": [
+        "UnityEngine.TestRunner",
+        "UnityEditor.TestRunner",
+        "NovaStriker.Core",
+        "NovaStriker.Contracts",
+        "NovaStriker.Gameplay",
+        "NovaStriker.Infrastructure",
+        "NovaStriker.UI",
+        "NovaStriker.Tests.Support",
+        "NovaStriker.Bootstrap",
+        "UnityEngine.UI"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": true,
+    "precompiledReferences": [
+        "nunit.framework.dll"
+    ],
+    "autoReferenced": false,
+    "defineConstraints": [
+        "UNITY_INCLUDE_TESTS"
+    ],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

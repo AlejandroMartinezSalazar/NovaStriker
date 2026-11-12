@@ -1,0 +1,14 @@
+{
+    "name": "NovaStriker.Infrastructure.PlayFab",
+    "rootNamespace": "NovaStriker.Infrastructure.Online",
+    "references": ["NovaStriker.Infrastructure", "PlayFab"],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": false,
+    "defineConstraints": ["NOVA_PLAYFAB"],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

@@ -1,0 +1,19 @@
+{
+    "name": "NovaStriker.Gameplay",
+    "rootNamespace": "NovaStriker.Gameplay",
+    "references": [
+        "NovaStriker.Core",
+        "NovaStriker.Contracts",
+        "Unity.InputSystem",
+        "UnityEngine.UI"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": false,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

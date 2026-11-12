@@ -1,0 +1,414 @@
+fileFormatVersion: 2
+guid: 30b0a8f8bf22c3e4989dcd85c6a08cbe
+ModelImporter:
+  serializedVersion: 21202
+  internalIDToNameTable:
+  - first:
+      1: 100000
+    second: CornerFlag
+  - first:
+      1: 100002
+    second: Field
+  - first:
+      1: 100004
+    second: Flags
+  - first:
+      1: 100006
+    second: Lights
+  - first:
+      1: 100008
+    second: OuterFields
+  - first:
+      1: 100010
+    second: People
+  - first:
+      1: 100012
+    second: Skybox
+  - first:
+      1: 100014
+    second: Stadium
+  - first:
+      1: 100016
+    second: //RootNode
+  - first:
+      4: 400000
+    second: CornerFlag
+  - first:
+      4: 400002
+    second: Field
+  - first:
+      4: 400004
+    second: Flags
+  - first:
+      4: 400006
+    second: Lights
+  - first:
+      4: 400008
+    second: OuterFields
+  - first:
+      4: 400010
+    second: People
+  - first:
+      4: 400012
+    second: Skybox
+  - first:
+      4: 400014
+    second: Stadium
+  - first:
+      4: 400016
+    second: //RootNode
+  - first:
+      21: 2100000
+    second: Mat_Concrete
+  - first:
+      21: 2100002
+    second: Mat_StadiumAll
+  - first:
+      21: 2100004
+    second: Mat_Banner
+  - first:
+      21: 2100006
+    second: Mat_Seat
+  - first:
+      21: 2100008
+    second: Mat_VertexCol
+  - first:
+      21: 2100010
+    second: Mat_Cameraman
+  - first:
+      21: 2100012
+    second: Mat_Grass
+  - first:
+      21: 2100014
+    second: Mat_FieldLine
+  - first:
+      21: 2100016
+    second: Mat_People_B
+  - first:
+      21: 2100018
+    second: Mat_People_A
+  - first:
+      21: 2100020
+    second: Mat_Flag_A2
+  - first:
+      21: 2100022
+    second: Mat_Flag_A1
+  - first:
+      21: 2100024
+    second: Mat_Flag_A4
+  - first:
+      21: 2100026
+    second: Mat_Flag_A5
+  - first:
+      21: 2100028
+    second: Mat_Flag_A3
+  - first:
+      21: 2100030
+    second: Mat_Flag_B2
+  - first:
+      21: 2100032
+    second: Mat_Flag_B1
+  - first:
+      21: 2100034
+    second: Mat_Flag_B4
+  - first:
+      21: 2100036
+    second: Mat_Flag_B5
+  - first:
+      21: 2100038
+    second: Mat_Flag_B3
+  - first:
+      21: 2100040
+    second: Mat_Light
+  - first:
+      21: 2100042
+    second: Mat_Skybox
+  - first:
+      23: 2300000
+    second: CornerFlag
+  - first:
+      23: 2300002
+    second: Field
+  - first:
+      23: 2300004
+    second: Flags
+  - first:
+      23: 2300006
+    second: Lights
+  - first:
+      23: 2300008
+    second: OuterFields
+  - first:
+      23: 2300010
+    second: People
+  - first:
+      23: 2300012
+    second: Skybox
+  - first:
+      23: 2300014
+    second: Stadium
+  - first:
+      33: 3300000
+    second: CornerFlag
+  - first:
+      33: 3300002
+    second: Field
+  - first:
+      33: 3300004
+    second: Flags
+  - first:
+      33: 3300006
+    second: Lights
+  - first:
+      33: 3300008
+    second: OuterFields
+  - first:
+      33: 3300010
+    second: People
+  - first:
+      33: 3300012
+    second: Skybox
+  - first:
+      33: 3300014
+    second: Stadium
+  - first:
+      43: 4300000
+    second: Stadium
+  - first:
+      43: 4300002
+    second: OuterFields
+  - first:
+      43: 4300004
+    second: Field
+  - first:
+      43: 4300006
+    second: CornerFlag
+  - first:
+      43: 4300008
+    second: People
+  - first:
+      43: 4300010
+    second: Flags
+  - first:
+      43: 4300012
+    second: Lights
+  - first:
+      43: 4300014
+    second: Skybox
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat_Banner
+    second: {fileID: 2100000, guid: ed5d0367745059a4cb8aeeb3e57da71d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat_Cameraman
+    second: {fileID: 2100000, guid: b584fb2153dc2e3409d74aeaf7e5d98b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat_Concrete
+    second: {fileID: 2100000, guid: 91b07598946f4c44eb129671ee5e0ddb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat_FieldLine
+    second: {fileID: 2100000, guid: d9f7f4ded5d90174c985815b53a067d2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat_Flag_A1
+    second: {fileID: 2100000, guid: 52a29889fbb8e1d43bda5b962debad3d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat_Flag_A2
+    second: {fileID: 2100000, guid: 6fda1bfc00e72e64dafbd4033e6c657f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat_Flag_A3
+    second: {fileID: 2100000, guid: 9c60cf12798fe6d4e98f421aa0116660, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat_Flag_A4
+    second: {fileID: 2100000, guid: b46ea9df608b0e347bfeba23f969ea12, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat_Flag_A5
+    second: {fileID: 2100000, guid: cf6486eabcded5d419dba2c6a8dd853c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat_Flag_B1
+    second: {fileID: 2100000, guid: 08565e41187a95947af3423a11163c73, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat_Flag_B2
+    second: {fileID: 2100000, guid: be58b9abe770c5247b8f385adc821603, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat_Flag_B3
+    second: {fileID: 2100000, guid: e8de6af0bbbcafd4892b77f2a0392959, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat_Flag_B4
+    second: {fileID: 2100000, guid: c3cdc31edd976b841be93ac9ed3f99ee, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat_Flag_B5
+    second: {fileID: 2100000, guid: b7b39299e8616524790e6ccffa93dcf7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat_Grass
+    second: {fileID: 2100000, guid: 7a7cdfea26e335c4b9a976b7558ad523, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat_Light
+    second: {fileID: 2100000, guid: fff7e765b4ae21444898e3c2b2724664, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat_People_A
+    second: {fileID: 2100000, guid: 8148f6bb51120f844957fbd092781669, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat_People_B
+    second: {fileID: 2100000, guid: b110f384238ba0f48b96c5545ecf4c6b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat_Seat
+    second: {fileID: 2100000, guid: 1c38507e205973542b2601493457eb41, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat_Skybox
+    second: {fileID: 2100000, guid: cf9df6fa6b761ae42ab11789ae40f53b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat_StadiumAll
+    second: {fileID: 2100000, guid: 8922e97eb98862d4bb67b7ca76339c12, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mat_VertexCol
+    second: {fileID: 2100000, guid: 2a98685955ddb534cb737876dac3662b, type: 2}
+  materials:
+    materialImportMode: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    removeConstantScaleCurves: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 0
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    nodeNameCollisionStrategy: 0
+    fileIdsGeneration: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 0
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 0.001
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 0
+  humanoidOversampling: 1
+  avatarSetup: 0
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 238584
+  packageName: Low Poly Soccer Stadium And Balls
+  packageVersion: 1.0
+  assetPath: Assets/SoccerStadiumPack/Model/Stadium.FBX
+  uploadId: 548185

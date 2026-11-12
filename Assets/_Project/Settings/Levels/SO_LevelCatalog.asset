@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5145bead26199a8478a89af2b93c7906, type: 3}
+  m_Name: SO_LevelCatalog
+  m_EditorClassIdentifier: NovaStriker.Gameplay::NovaStriker.Gameplay.Level.LevelCatalog
+  _levels:
+  - {fileID: 11400000, guid: 2cb19f65ca46baa47917a349adc476c4, type: 2}
+  - {fileID: 11400000, guid: 5c746f137955e32469c08839fb27e410, type: 2}
+  - {fileID: 11400000, guid: 27678512d2890d049af5c42fecd20048, type: 2}
+  - {fileID: 11400000, guid: d44d5be8f4ffc0f4db1ab80e30c546ad, type: 2}
+  - {fileID: 11400000, guid: af89e15f7b424074b8f1ada123a2ac61, type: 2}
+  - {fileID: 11400000, guid: 2fdbb11210199664a830de5b5892f0f7, type: 2}
+  - {fileID: 11400000, guid: 668e6bb22225354409672257627c968a, type: 2}
+  - {fileID: 11400000, guid: bb2875baa3bfb764d9a6eba7c7682c93, type: 2}
+  - {fileID: 11400000, guid: ae53f119313b50843837259f3f6c687e, type: 2}
+  - {fileID: 11400000, guid: 55ba846c80de51c46ba7c3567ed68fc5, type: 2}
+  - {fileID: 11400000, guid: 04ffe7ea1c2b3e94688a9fb873a2053e, type: 2}
+  - {fileID: 11400000, guid: 6d796793f187c9142997e090479c163c, type: 2}
+  - {fileID: 11400000, guid: c2ecb4febab897141bfc81ed96305974, type: 2}

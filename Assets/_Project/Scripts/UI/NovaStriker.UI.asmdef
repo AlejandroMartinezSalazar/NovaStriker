@@ -1,0 +1,14 @@
+{
+    "name": "NovaStriker.UI",
+    "rootNamespace": "NovaStriker.UI",
+    "references": ["NovaStriker.Core", "NovaStriker.Contracts", "UnityEngine.UI", "Unity.TextMeshPro"],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": false,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

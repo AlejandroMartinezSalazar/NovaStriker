@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "269374350710",
+    "project_id": "soccerstriker2026",
+    "storage_bucket": "soccerstriker2026.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:269374350710:android:d81cb22cd334fffeb80657",
+        "android_client_info": {
+          "package_name": "com.oxac.globalsoccercup"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDgvFBgOOo52_PReLayW4LBRGBrOymFxAE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

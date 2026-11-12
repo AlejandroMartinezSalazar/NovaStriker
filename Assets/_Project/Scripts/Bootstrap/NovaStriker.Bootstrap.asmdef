@@ -1,0 +1,14 @@
+{
+    "name": "NovaStriker.Bootstrap",
+    "rootNamespace": "NovaStriker.Bootstrap",
+    "references": ["NovaStriker.Core", "NovaStriker.Contracts", "NovaStriker.Gameplay", "NovaStriker.Infrastructure", "NovaStriker.Infrastructure.PlayFab", "NovaStriker.UI", "Unity.InputSystem", "UnityEngine.UI"],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": false,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
