@@ -20,6 +20,7 @@ namespace NovaStriker.Tests.EditMode
         [TestCase(GameLayers.KillZone, GameLayers.KillZoneName)]
         [TestCase(GameLayers.Debris, GameLayers.DebrisName)]
         [TestCase(GameLayers.AimBackstop, GameLayers.AimBackstopName)]
+        [TestCase(GameLayers.Portal, GameLayers.PortalName)]
         public void Layer_HasExpectedIndex(int expectedIndex, string layerName)
         {
             Assert.AreEqual(expectedIndex, LayerMask.NameToLayer(layerName));
@@ -40,6 +41,10 @@ namespace NovaStriker.Tests.EditMode
         [TestCase(GameLayers.Ball, GameLayers.Debris, false)]
         [TestCase(GameLayers.Ragdoll, GameLayers.Debris, false)]
         [TestCase(GameLayers.Debris, GameLayers.Debris, false)]
+        [TestCase(GameLayers.Ball, GameLayers.Portal, true)]
+        [TestCase(GameLayers.Ragdoll, GameLayers.Portal, false)]
+        [TestCase(GameLayers.Obstacle, GameLayers.Portal, false)]
+        [TestCase(GameLayers.Debris, GameLayers.Portal, false)]
         public void CollisionMatrix_IsConfigured(int a, int b, bool shouldCollide)
         {
             Assert.AreEqual(shouldCollide, !Physics.GetIgnoreLayerCollision(a, b));

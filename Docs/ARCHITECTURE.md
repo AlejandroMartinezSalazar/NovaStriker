@@ -47,18 +47,21 @@
 
 ## 3. Ensamblados (asmdef) y dependencias
 
+> Actualizado el 2026-11-12 con las referencias reales de cada `.asmdef` (la versión inicial preveía un asmdef aparte para AdMob; al final AdMob quedó en Infrastructure bajo `#if NOVA_ADMOB`, y PlayFab sí tiene asmdef propio).
+
 ```
-NovaStriker.Bootstrap ──► Gameplay, UI, Infrastructure, Contracts, Core
-NovaStriker.Gameplay  ──► Contracts, Core, Unity.InputSystem
-NovaStriker.UI        ──► Contracts, Core, Unity.ugui (TMP)
-NovaStriker.Infrastructure ──► Contracts, Core
-NovaStriker.Infrastructure.AdMob ──► Infrastructure, Contracts, GoogleMobileAds   (defineConstraints: NOVA_ADMOB)
-NovaStriker.Contracts ──► Core
-NovaStriker.Core      ──► (nada propio)
-NovaStriker.EditorTools ──► todos (solo Editor; no se llama "NovaStriker.Editor" para no chocar con la clase UnityEditor.Editor)
-NovaStriker.Tests.EditMode ──► Core, Contracts, Gameplay
+NovaStriker.Bootstrap               ──► Core, Contracts, Gameplay, Infrastructure, Infrastructure.PlayFab, UI, Unity.InputSystem, UnityEngine.UI
+NovaStriker.Gameplay                ──► Core, Contracts, Unity.InputSystem, UnityEngine.UI
+NovaStriker.UI                      ──► Core, Contracts, UnityEngine.UI, Unity.TextMeshPro
+NovaStriker.Infrastructure          ──► Core, Contracts   (+ SDK precompilados de AdMob y Firebase, bajo #if NOVA_ADMOB / NOVA_FIREBASE)
+NovaStriker.Infrastructure.PlayFab  ──► Infrastructure, PlayFab   (defineConstraints: NOVA_PLAYFAB)
+NovaStriker.Contracts               ──► Core
+NovaStriker.Core                    ──► (nada propio)
+NovaStriker.EditorTools             ──► Core, Contracts, Gameplay, Infrastructure, UI, Bootstrap   (solo Editor)
+NovaStriker.Tests.Support           ──► Core   (solo con UNITY_INCLUDE_TESTS)
+NovaStriker.Tests.EditMode          ──► Core, Contracts, Gameplay, Infrastructure, UI, Bootstrap, Tests.Support   (solo Editor)
 ```
-Gameplay y UI **no** se conocen. Infrastructure no conoce Gameplay. El asmdef de AdMob solo compila cuando exista el símbolo `NOVA_ADMOB`, de modo que el proyecto compila sin el plugin.
+Gameplay, UI e Infrastructure **no** se conocen: se comunican con eventos e interfaces de Contracts. Unity no compila una referencia que no esté declarada en el asmdef, así que estas reglas se cumplen por construcción. `Infrastructure.PlayFab` solo se compila con el símbolo `NOVA_PLAYFAB`, de modo que el proyecto compila sin el SDK.
 
 ## 4. Árbol de carpetas
 
@@ -519,3 +522,22 @@ public interface IBallFactory { BallView Create(); }
 - Infrastructure: `LocalizationService` (sin elección → idioma del móvil o inglés; `SetLanguage` guarda al momento y avisa con `LanguageChanged`) y `StringTable` (todas las traducciones). Pruebas: ninguna clave sin traducir y mismos `{0}` en los tres idiomas.
 - UI: los presentadores piden sus textos a `ILocalization`; los textos fijos de escena llevan `LocalizedText` (clave) y los inicializa `LocalizedTextInstaller` desde cada raíz de composición. `LanguagePickerPresenter` muestra la pantalla de idioma solo la primera vez; `SettingsPresenter` cambia el idioma desde Ajustes (`LanguageButtons`).
 - Setup: `NovaStriker/Setup/Idiomas` (pantalla de idioma, fila en Ajustes y `LocalizedText` en los textos fijos de menú y juego). Ejecutarlo después de `Tutorial - Indicación de tiro`.
+
+
+## 15. Registro de cambios posteriores (2026-10-20 → 2026-11-12)
+
+Cambios hechos después de la Etapa 10, del más reciente al más antiguo. Las pruebas EditMode pasaron de 260 a **328** (ejecución del 2026-11-12: 328/328 correctas, evidencia en `Docs/evidencias/`).
+
+| Fecha | Cambio | Detalle |
+|---|---|---|
+| 2026-11-12 | Repositorio y evidencias | Git con `.gitignore` y `.gitattributes` de Unity, `README.md` (qué es, cómo ejecutarlo, cómo probarlo, estructura), `Tools/run-tests.bat` (pruebas por consola, resultados en `TestResults/`) y resultados guardados en `Docs/evidencias/`. Cierra el riesgo 13 (sin control de versiones). |
+| 2026-10-28 | Nivel 13 "Atajo" | Barrera de vidrio irrompible a lo ancho, portal azul delante y naranja detrás; dos futbolistas solo alcanzables por el portal y uno por encima del vidrio. 5 balones, tiro recto. Generador `NovaStriker/Niveles/Generar nivel 13 (portales)`; herramientas comunes extraídas a `LevelPrefabEditor`. |
+| 2026-10-28 | Portales | `PortalPair` + dos `Portal` (Gameplay/Obstacles/Portals): el balón sale por el centro del otro portal con la misma velocidad y dirección. Lógica pura `TeleportBudget` (límite anti-bucle) y `PortalArrivalGate`. Nueva capa 14 `Portal` (solo detecta Ball), `ObstacleType.Portal`, `SfxId.Portal`, evento `BallTeleportedEvent`, `BallView.TeleportTo`. Menú `NovaStriker/Obstáculos/Crear portales`. 6 pruebas nuevas. |
+| 2026-10-23 | Analíticas con Firebase | Observer `AnalyticsEventRouter` + Adapter `IAnalyticsBackend` (Firebase en Android bajo `NOVA_FIREBASE`, consola en el Editor, vacío sin SDK). Eventos: `language_selected`, `tutorial_begin/complete`, `level_start/end/retry/quit`, `leave_game` (dónde estaba el jugador al salir), `rewarded_offer/complete`, `interstitial_shown`; propiedad `highest_level`; `user_id` = id de PlayFab. `AdsService` publica eventos de anuncios. Menú `NovaStriker/Setup/Firebase - Analíticas`. 15 pruebas nuevas. |
+| 2026-10-23 | Build de Android con Firebase | `GradleRepoPathFix` (`IPostGenerateGradleAndroidProject`): cambia los espacios de las rutas `file:///` de `settings.gradle` por `%20` (la carpeta del proyecto tiene un espacio). Se elimina la copia duplicada de `Assets/ExternalDependencyManager` y se usa el paquete `com.unity.external-dependency-manager` 2.1.0. |
+| 2026-10-22 | Inicio de sesión con PlayFab | Anónimo y automático al abrir la app (`LoginWithCustomID` con el id del dispositivo), sin bloquear el juego: si falla, se juega sin cuenta y se reintenta a los 5, 20 y 60 s y al volver a la app. `IPlayerAccount` (Contracts), `PlayerAccountService`, `PlayerIdResolver`, `PlayFabConfig`; adaptador real en el asmdef `Infrastructure.PlayFab` (`NOVA_PLAYFAB`). Menú `NovaStriker/Setup/PlayFab - Inicio de sesión`. 10 pruebas nuevas. |
+| 2026-10-22 | Recompensa de +2 balones | El anuncio recompensado tras perder da 2 balones (`LevelRulesTracker.RewardedExtraBalls = 2`), una vez por intento. Sustituye al "+1 balón" de D5. |
+| 2026-10-22 | Idiomas y tutorial | Ver los apartados "Tutorial del nivel 1" e "Idiomas" de este documento. La pantalla de idioma aparece antes que el nivel 1. |
+| 2026-10-21 | Caja de vidrio y niveles 10–12 | `PF_GlassCrate` (ver D9) y niveles 10 "Lluvia de cajas", 11 "Relevo" y 12 "Caos", generados con `NovaStriker/Niveles/Generar niveles 10, 11 y 12`. |
+| 2026-10-21 | Herramientas de niveles | `NovaStriker/Niveles/Integrar niveles nuevos` (crea `SO_Level_NN` y los añade al final del catálogo sin reordenar) y `NovaStriker/Desarrollo/Probar nivel...`. Niveles 7–11 integrados. |
+| 2026-10-20 | Etapa 11 y estabilidad | Configuración de publicación Android (`ProjectSetupStage11`, ver D2), conversión del estadio a URP, `PhysicsSettler` (duerme cajas y futbolistas 0,4 s tras construir el nivel) y `PM_Footballer` (fricción 1) para que las pirámides no resbalen. |
